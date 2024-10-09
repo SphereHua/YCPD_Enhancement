@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "ycpd_enhancement",
+	"version": "${version}",
+	"name": "YCPD Enhancement",
+	"description": "Added *specific* enhancements for original Minecraft 1.20.6",
+	"authors": [
+		"化合价[APPLENO33]"
+	],
+	"contact": {
+		"homepage": "https://blog.ycpd.top/",
+		"sources": "https://blog.ycpd.top/"
+	},
+	"license": "Apache-2.0",
+	"icon": "assets/ycpd_enhancement/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"top.ycpd.enhancement.YCPD_enhancement"
+		],
+		"client": [
+			"top.ycpd.enhancement.YCPD_enhancementClient"
+		]
+	},
+	"mixins": [
+		"ycpd_enhancement.mixins.json",
+		{
+			"config": "ycpd_enhancement.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
